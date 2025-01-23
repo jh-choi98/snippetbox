@@ -12,7 +12,6 @@ func home(w http.ResponseWriter, r *http.Request) {
 }
 // HTTP handler function which is responsible for processing incoming
 // HTTP requests and generating appropriate responses
-
 // w http.ResponseWriter
 // - is used to construct the HTTP response
 // - writes data back to the client
@@ -46,3 +45,18 @@ func main() {
 // A servemux (serve multiplexer) in Go is an HTTP request router that
 // matches incoming HTTP requests to the appropriate handler functions
 // based on the request's URL pattern
+
+// TCP (Transmission Control Protocol)
+// : A set of rules (a protocol) that computers use to communicate
+// reliably over the internet or a network. It ensures that data sent
+// from one computer to another arrives correctly and in order
+
+// How TCP uses network addresses
+// : when you send or receive data over a network, TCP uses 2 key
+// pieces of addressing information
+// 1. IP Address (where to send the data)
+//  - a unique number assigned to each device on a network
+//	ex. 192.168.1.10
+// 2. Port Number (which service to talk to)
+//  - a unique identifier for a specific application or service on a device
+
