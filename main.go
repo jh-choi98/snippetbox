@@ -21,12 +21,11 @@ func snippetView(w http.ResponseWriter, r *http.Request) {
 
 func snippetCreate(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "POST" {
-		// Use the Header().Set() method to add an 'Allow: POST'
-		// header to the response header map. The first parameter is
-		// the header nema, and the second parameter is the header value
-		w.Header().Set("Allow", "POST")
-		w.WriteHeader(405)
-		w.Write([]byte("Method Not Allowed"))
+		
+		// w.Header().Set("Allow", "POST")
+		// w.WriteHeader(405)
+		// w.Write([]byte("Method Not Allowed"))
+		http.Error(w, "Method Not Allowed", http.StatusMethodNotAllowed)
 		return
 	}
 
