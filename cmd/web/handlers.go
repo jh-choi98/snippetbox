@@ -46,12 +46,11 @@ func home(w http.ResponseWriter, r *http.Request) {
 	// the template content as the response body. The last parameter
 	// to Execute() represents any dynamic data that we want to pass
 	// in, which for now we'll leave as nil
-	err = ts.Execute(w, nil)
-	if err != nil {
-		log.Print(err.Error())
-		http.Error(w, "Internal Server Error", 500)
-	}
-
+	// err = ts.Execute(w, nil)
+	// if err != nil {
+	// 	log.Print(err.Error())
+	// 	http.Error(w, "Internal Server Error", 500)
+	// }
 }
 
 func snippetView(w http.ResponseWriter, r *http.Request) {

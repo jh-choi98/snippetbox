@@ -28,3 +28,15 @@ func main() {
 	err := http.ListenAndServe(":4000", mux)
 	log.Fatal(err)
 }
+
+
+/*
+브라우저 URL 요청 → 서버 요청 처리 과정:
+(1) http://localhost:4000/static/css/main.css
+        ↓
+(2) mux.Handle("/static/", ...) 를 통해 "/static" 경로 확인.
+        ↓
+(3) http.StripPrefix("/static", ...) 가 "/static" 제거 후, "/css/main.css"로 전달.
+        ↓
+(4) fileServer 핸들러가 "./ui/static/css/main.css" 경로에서 실제 파일을 찾아 응답.
+*/
